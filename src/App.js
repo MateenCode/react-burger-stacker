@@ -1,7 +1,8 @@
 import React from "react";
 // Components imports
-import IngredientList from "./components/IngredientList";
+
 import BurgerPane from "./components/BurgerPane";
+import IngredientList from "./components/IngredientList";
 
 // CSS imports
 import "./css/App.css";
