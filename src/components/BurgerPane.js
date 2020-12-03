@@ -3,12 +3,12 @@ import React from 'react'
 //components
 import BurgerStack from './BurgerStack.js'
 
-const BurgerPain = () => {
+const BurgerPain = ({builtBurger, clearBurger}) => {
     return(
         <div>
             Build Your Burger:
-            <BurgerStack />
-            <button>Clear</button>
+            <BurgerStack builtBurger={builtBurger}/>
+            <button onClick={clearBurger}>Clear</button>
         </div>
     )
 }

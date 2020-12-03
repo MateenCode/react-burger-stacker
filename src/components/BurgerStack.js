@@ -4,12 +4,15 @@ import React from 'react'
 import Ingredient from './Ingredient.js'
 
 
-const BurgerStack = () => {
+const BurgerStack = ({builtBurger}) => {
     return(
         <div>
-            Ingredient options go here
             {/* going to have to map through the array of builtBurger and print render them in order */}
-            <Ingredient />
+            {builtBurger.map(topping => (
+                <Ingredient name={topping.name} color={topping.color}/>
+            ))
+            }
+            {console.log('this is builtBurger', builtBurger)}
         </div>
     )
 }
