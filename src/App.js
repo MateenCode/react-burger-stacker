@@ -1,15 +1,59 @@
-import React from "react";
+import React, {useState} from "react";
 // Components imports
-import IngredientList from "./components/IngredientList";
-import BurgerPane from "./components/BurgerPane";
+import Ingredient from "./components/Ingredient"
+import BurgerStack from "./components/BurgerStack";
 // CSS imports
 import "./css/App.css";
 
 const App = () => {
+  const [ingredients, setIngredient] = useState(
+  [{ id: 1, name: "Kaiser Bun", color: "saddlebrown" },
+  { id: 2,name: "Sesame Bun", color: "sandybrown" },
+  { id: 3, name: "Gluten Free Bun", color: "peru" },
+  { id: 4, name: "Lettuce Wrap", color: "olivedrab" },
+  { id: 5, name: "Beef Patty", color: "#3F250B" },
+  { id: 6, name: "Soy Patty", color: "#3F250B" },
+  { id: 7, name: "Black Bean Patty", color: "#3F250B" },
+  { id: 8, name: "Chicken Patty", color: "burlywood" },
+  { id: 9, name: "Lettuce", color: "lawngreen" },
+  { id: 10, name: "Tomato", color: "tomato" },
+  { id: 11, name: "Bacon", color: "maroon" },
+  { id: 12, name: "Onion", color: "lightyellow" }]
+  )
+
+  const [selectedIngredients, setSelectedIngredients] = useState([])
+
+  const selectedTopping = (name) => {
+    console.log(name)
+    setSelectedIngredients([name,...selectedIngredients])
+  }
+
+  const clearBurger = () => {
+    setSelectedIngredients([])
+  }
+
   return (
     <div className="App">
-      <IngredientList />
-      <BurgerPane />
+      <h1>Welcome to Burger World!</h1>
+      <h4>Select your bun, burger, and toppings to build your burger</h4>
+      <div className="menu">
+        <h2>Ingredients</h2>
+        {ingredients.map(ingredient => (
+          <Ingredient 
+            key={ingredient.id}
+            name={ingredient.name}
+            selectedTopping={() => selectedTopping(ingredient.name)}
+            color={ingredient.color}
+        />
+      ))}
+    </div>
+    <div className="menu">
+      <BurgerStack 
+        selectedIngredients = {selectedIngredients}
+        clearBurger = {() => clearBurger()}
+        key = {Math.floor(Math.random()*selectedIngredients.length)}
+      />
+    </div>
     </div>
   );
 };
