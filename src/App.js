@@ -1,3 +1,4 @@
+//import useState in this file to be able to use it in declaring states 
 import React, {useState} from "react";
 // Components imports
 import IngredientList from "./components/IngredientList";
@@ -28,13 +29,14 @@ const App = () => {
   //initializing a state for the builtBurger and set it equal to an empty array
   const [builtBurger, setBuiltBurger] = useState([])
 
-  const moveOption = (e) => {
-    console.log(e.target.value)
-    console.log('EVENT.TARGET', e.target)
+  const moveOption = (topping) => {
+    //console.log('move option topping that was passed', topping)
     
-    setBuiltBurger([...builtBurger, e.target.value])
+    //use setBuiltBurger to add new option/topping to the builtBurger state and copying the previous array AFTER adding new topping
+    setBuiltBurger([topping, ...builtBurger])
   }
 
+  //function that clears the builtBurger array using the setBuiltBurger functionality 
   const clearBurger = () => {
     setBuiltBurger([])
   }
