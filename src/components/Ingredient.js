@@ -6,11 +6,13 @@ import '../css/components/ClassComponents.css';
 //this Ingredient component grabs name and color props and displays/uses it
 const Ingredient = ({name, color, moveOption, status}) => {
 
+    //condition for checking for certain background colors and changing textColor accordingly 
     let textColor= 'black';
     if(color == '#3F250B' || color == 'maroon'){
         textColor= 'rgba(241, 235, 214)'
     }
 
+    //variable that starts in for styling attributes 
     const style= {
         background: color,
         color: textColor,
@@ -19,6 +21,7 @@ const Ingredient = ({name, color, moveOption, status}) => {
 
     return(
         <div className='item'>
+            {/* passing in the style variable with inline styling */}
             <div style={style}>{name}</div>
             {/* when button is click, run a function that will add it to the new array of builtBurger */}
             
