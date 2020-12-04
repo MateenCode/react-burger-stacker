@@ -8,12 +8,12 @@ const BurgerPane = ({burgerStack, setBurgerStack}) => {
         name: event.target.value.split(",")[0], 
         color: event.target.value.split(",")[1]
     }
-    setBurgerStack([currentItem, ...burgerStack])
+    setBurgerStack([])
 }
   return <div className="BurgerPane">
   <div>this is burger pane that displays the burger stack and has a clear burger button</div>
     <BurgerStack burgerStack={burgerStack}/>
-    <button onClick={burgerStack}>Clear</button>
+    <button onClick={deleteBurger}>Clear</button>
   </div>;
   };
 
