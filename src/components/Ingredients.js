@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from 'react'
+import BurgerStack from './BurgerStack'
+import IngredientList from './IngredientList'
 
-
-let ingredients = [
+const ingredients = [
     { name: "Kaiser Bun", color: "saddlebrown" },
     { name: "Sesame Bun", color: "sandybrown" },
     { name: "Gluten Free Bun", color: "peru" },
@@ -17,11 +18,12 @@ let ingredients = [
 ];
 // this component sends the ingredients to the IngredientList  and BurgerStack components
 const Ingredients = () => {
-
+//    const [ingredients, setIngredients]= useState(ingredients)
     return (
         <div >
-            <IngredientList ingredient={ingredients.name} ingredientColor={ingredients.color} />
-            <BurgerStack ingredient={ingredients.name} ingredientColor={ingredients.color} />
+            
+            <IngredientList 
+            ingredient={ingredients} />
         </div>
     )
 }

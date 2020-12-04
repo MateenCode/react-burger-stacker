@@ -1,15 +1,38 @@
-import React from "react";
-import Ingredients from "./components/Ingredients";
-import BurgerPane from "./components/BurgerPane"
+import React, { useState } from 'react'
+import shortid from 'shortid'
+import BurgerStack from './BurgerStack'
+
+//component
 
 
-const IngredientList = () => {
- const [ingredients, setIngredients] = useState([])
-  return (
-  <div >
-  <div>This component displays the list of ingredients from the Ingredients component</div>
-</div>
-  )
+const IngredientList = ({ ingredient, setBurgerStack, burgerStack }) => {
+    //set ingredient list 
+
+    //    debugger
+
+    const sendIngredient = event => {
+        const currentItem = name
+        setBurgerStack([event.target.value, ...burgerStack])
+    }
+    
+    return (
+        <div className="IngredientList" >
+            <div>This component displays the list of ingredients from the Ingredients component</div>
+
+            {ingredient.map(item => {
+                const background = item.color
+                return (
+                    <div className="specificIngredient"
+                        style={{ "background-color": background }}>
+                        <p key={item.name}>{item.name}</p>
+                        {/* button needs to send ingredient to burger stack */}
+                        <button value={`${item.name}, ${item.color}`} onClick={sendIngredient}>></button>
+                    </div>
+                )
+            })}
+
+        </div>
+    )
 }
 
 export default IngredientList;

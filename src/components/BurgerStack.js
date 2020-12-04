@@ -1,11 +1,23 @@
-import React from "react";
-import IngredientList from "./components/IngredientList";
-import Ingredients from "./components/Ingredients"
-const BurgerStack = () => {
-  
-  return <div className="App">
-  <div>this is burger stack that is going to show the stack of ingredients</div>
-</div>;
+import React, { useState } from 'react'
+
+//components
+import Ingredients from './Ingredients'
+
+const BurgerStack = ({burgerStack}) => {
+
+    return <div>
+        <div>this is burger stack that is going to show the stack of ingredients</div>
+        {burgerStack.map(item => {
+            const background = item.color
+            console.log(item.name)
+            return (
+                <div className="specificIngredient"
+                    style={{ "background-color": background }}>
+                    <p key={item.name}>{item.name}</p>
+                </div>)
+        }
+        )}
+    </div>
 };
 
 export default BurgerStack;
