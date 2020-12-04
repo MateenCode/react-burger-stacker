@@ -28,7 +28,7 @@ const [burgerStack, setBurgerStack] = useState([])
   return (
     <div className="App">
       <IngredientList ingredient={ingredient} setBurgerStack={setBurgerStack} burgerStack={burgerStack}/>
-      <BurgerPane burgerStack={burgerStack}/>
+      <BurgerPane burgerStack={burgerStack} setBurgerStack={setBurgerStack}/>
     </div>
   );
 };

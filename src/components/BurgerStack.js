@@ -15,8 +15,9 @@ const BurgerStack = ({burgerStack}) => {
                     style={{ "background-color": background }}>
                     <p key={item.name}>{item.name}</p>
                 </div>)
-        }
+            }
         )}
+        
     </div>
 };
 

@@ -11,8 +11,11 @@ const IngredientList = ({ ingredient, setBurgerStack, burgerStack }) => {
     //    debugger
 
     const sendIngredient = event => {
-        const currentItem = name
-        setBurgerStack([event.target.value, ...burgerStack])
+        const currentItem = {
+            name: event.target.value.split(",")[0], 
+            color: event.target.value.split(",")[1]
+        }
+        setBurgerStack([currentItem, ...burgerStack])
     }
     
     return (
