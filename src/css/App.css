@@ -1,3 +1,8 @@
+body {
+  background-image: url(https://i.pinimg.com/originals/41/5a/84/415a8473ff9e624e370add7f882d687a.jpg);
+  background-size: cover;
+}
+
 .App {
   text-align: center;
   display: flex;

@@ -5,10 +5,10 @@ import BurgerStack from './BurgerStack.js'
 
 const BurgerPain = ({builtBurger, clearBurger}) => {
     return(
-        <div>
-            Build Your Burger:
+        <div className='list'>
+            <h2>Build Your Burger:</h2>
             <BurgerStack builtBurger={builtBurger}/>
-            <button onClick={clearBurger}>Clear</button>
+            <button onClick={clearBurger} id='clear'>Clear</button>
         </div>
     )
 }
