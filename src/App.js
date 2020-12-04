@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, {useState} from "react"
 // Components imports
 import Ingredient from "./components/Ingredient"
-import BurgerStack from "./components/BurgerStack";
+import BurgerStack from "./components/BurgerStack"
+import CustomTopping from "./components/CustomTopping"
 // CSS imports
 import "./css/App.css";
 
@@ -23,13 +24,20 @@ const App = () => {
 
   const [selectedIngredients, setSelectedIngredients] = useState([])
 
+  //add selected ingredient
   const selectedTopping = (name) => {
     console.log(name)
     setSelectedIngredients([name,...selectedIngredients])
   }
 
+  //clear selected ingredients array
   const clearBurger = () => {
     setSelectedIngredients([])
+  }
+
+  //function to pass to add custom topping form
+  const addCustomTopping = (topping) => {
+    setIngredient([...ingredients, topping])
   }
 
   return (
@@ -45,7 +53,11 @@ const App = () => {
             selectedTopping={() => selectedTopping(ingredient.name)}
             color={ingredient.color}
         />
+        
       ))}
+      <CustomTopping 
+        addCustomTopping={addCustomTopping}
+      />
     </div>
     <div className="menu">
       <BurgerStack 
