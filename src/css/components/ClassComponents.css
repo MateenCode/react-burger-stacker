@@ -1,0 +1,28 @@
+
+.list {
+    width: 30%;
+    height: 100%;
+    background: rgba(245, 218, 108, 0.763);
+    border: 2px solid rgb(88, 69, 94);
+    color: rgb(88, 69, 94);
+    border-radius: 10px;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    background: rgba(241, 235, 214);
+}
+
+button#clear {
+    margin: .5em 0 .5em 0;
+    border-radius: 8px;
+}
+
+button {
+    font-family: 'Advent Pro', sans-serif;
+    
+}
