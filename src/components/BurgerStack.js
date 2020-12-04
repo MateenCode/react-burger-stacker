@@ -6,14 +6,19 @@ const BurgerStack = (props) =>{
 
 
     return(
-        <ul> 
-            {props.burger.map((burgerStuff, index)=>{
-                console.log(burgerStuff)
-                return(
-                    <li key={index} name={burgerStuff.name}> </li>
-                )
-            })}
-        </ul>
+        <div>
+            <ul> 
+                {props.burger.map((item, index)=>{
+                    return(
+                        <li key={index} style= {{ backgroundColor: `${item.color}` }}>
+                            {item.name} 
+                        </li>
+                    )
+                }
+                )}
+            </ul>
+            <button onClick= {(event)=>{{props.clearBurger(event)}}}>CLEARRR</button>
+        </div>
     )
 }
 

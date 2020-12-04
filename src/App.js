@@ -33,13 +33,18 @@ const App = () => {
     }
 
 
+    const clearBurger = ()=> {
+      console.log(clearBurger)
+      setBurger([])
+  }
+
 
     return (
 
      <div style={{flexDirection: "row", jutifyContent: 'center'}}> 
         <h1> Ingredient List: </h1>
-          <IngredientList items={items} addItem ={addItem}/> 
-          <BurgerPane items={items} addItem ={addItem} burger={burger}/> 
+          <IngredientList items={items} addItem ={addItem} burger={burger}/> 
+          <BurgerPane items={items} addItem ={addItem} burger={burger} clearBurger={clearBurger}  /> 
       </div>
     )
   }
