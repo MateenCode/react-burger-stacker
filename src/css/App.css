@@ -1,3 +1,33 @@
 .App {
   text-align: center;
 }
+.burger-body{
+  display: flex;
+}
+.ingredients{
+  outline-color: black;
+  width: 50%;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+
+}
+ ul{
+   list-style-type: none;
+ }
+.burger-stack{
+  align-items: flex-end;
+  outline-color: black;
+  width: 50%;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+
+}
+.ingredient-btn{
+  width: 100px;
+  background-color: rgb(86, 255, 86);
+
+}
