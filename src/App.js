@@ -3,8 +3,8 @@ import "./css/App.css";
 import BurgerPane from "./components/BurgerPane";
 import IngredientList from "./components/IngredientList";
 
-function App() {
-  const [ingredients, setIngredients] = useState([
+const App = () => {
+  const [ingredients] = useState([
     { name: "Kaiser Bun", color: "saddlebrown" },
     { name: "Sesame Bun", color: "sandybrown" },
     { name: "Gluten Free Bun", color: "peru" },
@@ -22,14 +22,12 @@ function App() {
 
   let addIngredient = (e, ingredients) => {
     e.preventDefault();
-    console.log(ingredients);
     setChosenIngredients([ingredients, ...chosenIngredients]);
   };
 
   let clearBurger = () => {
     setChosenIngredients([]);
   };
-  console.log(ingredients);
   // addIngredient = (e, )
   return (
     <div className="burger-body">

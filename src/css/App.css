@@ -1,5 +1,6 @@
 .burger-body {
     display: flex;
+    padding: 20px 0 0 0;
   }
 
 .ingredients {
@@ -25,9 +26,7 @@ ul {
 
 .burger-stack{
     border: 1px black solid;
-    padding: 10px;
     border-radius: 4vw;
-    align-items: flex-end;
     width: 50%;
     height: 550px;
     text-align: center;
