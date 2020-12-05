@@ -7,6 +7,7 @@ const BurgerStack = (props) =>{
 
     return(
         <div>
+        <h1 style = {{textAlign: "center", fontFamily: "Chalkduster, fantasy"}}> Stack a Burger: </h1>
             <ul> 
                 {props.burger.map((item, index)=>{
                     return(
@@ -17,7 +18,7 @@ const BurgerStack = (props) =>{
                 }
                 )}
             </ul>
-            <button onClick= {(event)=>{{props.clearBurger(event)}}}>CLEARRR</button>
+            <button onClick= {(event)=>{{props.clearBurger(event)}}}>CLEAR BURGER</button>
             
         </div>
     )

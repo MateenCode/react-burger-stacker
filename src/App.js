@@ -33,8 +33,8 @@ const App = () => {
 
 
     const removeIngredients = () =>{
-      delete items[0]
-      setItems ([...items])
+     items.shift()
+     setItems ([...items])
     }
 
 
@@ -46,6 +46,7 @@ const App = () => {
       console.log(newItem)
       console.log(burger)
       setBurger([newItem, ...burger])
+      console.log(burger)
     }
 
 
@@ -58,7 +59,6 @@ const App = () => {
     return (
 
      <div style={{flexDirection: "row", jutifyContent: 'center'}}> 
-        <h1> Ingredient List: </h1>
           <IngredientList items={items} addItem ={addItem} burger={burger} removeIngredients={removeIngredients} /> 
           <BurgerPane items={items} addItem ={addItem} burger={burger} clearBurger={clearBurger} /> 
           <IngredientForm addToIngredients ={addToIngredients} /> 
