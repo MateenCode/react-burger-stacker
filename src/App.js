@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import BurgerPane from './components/BurgerPane'
 import IngredientList from './components/IngredientList'
+import IngredientForm from './components/IngredientForm'
 import "./css/App.css";
 
 //we want to render the ingredients as soon as the user loads the page, thats why the array is inside app.js. which is the parent. 
@@ -20,6 +21,21 @@ const App = () => {
         { name: "Bacon", color: "maroon" },
         { name: "Onion", color: "lightyellow" }, 
     ])
+
+
+
+
+    const addToIngredients = (newItem) =>{
+      setItems ([newItem, ...items])
+    }
+
+
+
+
+    const removeIngredients = () =>{
+      delete items[0]
+      setItems ([...items])
+    }
 
 
 
@@ -43,8 +59,9 @@ const App = () => {
 
      <div style={{flexDirection: "row", jutifyContent: 'center'}}> 
         <h1> Ingredient List: </h1>
-          <IngredientList items={items} addItem ={addItem} burger={burger}/> 
-          <BurgerPane items={items} addItem ={addItem} burger={burger} clearBurger={clearBurger}  /> 
+          <IngredientList items={items} addItem ={addItem} burger={burger} removeIngredients={removeIngredients} /> 
+          <BurgerPane items={items} addItem ={addItem} burger={burger} clearBurger={clearBurger} /> 
+          <IngredientForm addToIngredients ={addToIngredients} /> 
       </div>
     )
   }
