@@ -4,7 +4,7 @@ import ClearBurger from './ClearBurger';
 
 const BurgerPane = (props) => {
     return(
-        <div class="list burgerlist">
+        <div class="list-burgerlist">
             <h1>Here's your Burger 🍔:</h1>
             <BurgerStack chosenIngredients={props.chosenIngredients} />
             <ClearBurger clearBurger={props.clearBurger} />

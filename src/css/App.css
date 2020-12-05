@@ -3,22 +3,33 @@
   }
 
 .ingredients {
-    height: 400px;
+    height: 550px;
     text-align: center;
-    padding: 0 10px 0 10px;
     margin: auto;
-    font-size: 25px
+    font-size: 25px;
   }
+
+.list {
+    border: 1px black solid;
+    padding: 0 20px 0 20px;
+    border-radius: 4vw;
+}
 
 ul {
      list-style-type: none;
   }
 
+.list-burgerlist {
+      border: none;
+  }
+
 .burger-stack{
+    border: 1px black solid;
+    padding: 10px;
+    border-radius: 4vw;
     align-items: flex-end;
-    outline-color: black;
     width: 50%;
-    height: 400px;
+    height: 550px;
     text-align: center;
     margin: auto;
     color:black;
