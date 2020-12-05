@@ -8,8 +8,8 @@ import "./css/App.css";
 // functional not class
 const App = () => {
 
-  // array of objects
-  const [ingredient, setIngredient] = useState([
+  // array of objects for ingredients
+  const [ingredients, setIngredient] = useState([
     { name: "kaiser bun", color: "saddlebrown" },
     { name: "sesame bun", color: "sandybrown" },
     { name: "gluten free bun", color: "peru" },
@@ -24,11 +24,12 @@ const App = () => {
     { name: "onion", color: "lightyellow" }
   ])
   
+  // initialize state
   const [burgerStack, setBurgerStack] = useState([])
 
-  const addIngredient = (addedIngredient) => {
-    setBurgerStack([addedIngredient,...burgerStack])
-    console.log("burgerStack is:", burgerStack)
+  const addToStack = (addedIngredient) => {
+    setBurgerStack([addedIngredient, ...burgerStack])
+    // console.log("burgerStack is:", burgerStack)
   }
 
   const clearStack = () => {
@@ -36,10 +37,13 @@ const App = () => {
   }
   
   return (
-    <div className="App">
-      <IngredientList ingredients={ingredient} addIngredient={addIngredient} />
-      <BurgerPane burgerStack={burgerStack} clearBurger={clearStack} />
-    </div>
+    <>
+      <h1>welcome to burger stacker</h1>
+      <div className="App">
+        <IngredientList ingredients={ingredients} addToStack={addToStack} />
+        <BurgerPane burgerStack={burgerStack} clearBurger={clearStack} />
+      </div>
+    </>
   );
 };
 

@@ -1,24 +1,14 @@
-// import React, {useState} from "react";
-// import BurgerPane from "./BurgerPane";
+import React, {useState} from "react";
+import Ingredient from "./Ingredient";
 
-// const BurgerStack = () => {
+const BurgerStack = ({burgerStack}) => {
+    return (
+        <div className="stack">
+            {burgerStack.map(ingredient => (
+                <Ingredient name={ingredient.name} />
+            ))}
+        </div>
+    )
+}
 
-//     // const [stack, setStack] = useState([])
-
-//     // const addIngredient = (ingredient) => {
-//     //     setStack([ingredients, ...ingredients])
-//     // }
-
-//     // const clearStack = () => {
-//     //     setStack([])
-//     // }
-
-//     return (
-//     <div>
-//         burger stack has the following ingredients added:
-//         <BurgerPane />
-//     </div>
-//     )
-//   };
-  
-//   export default BurgerStack;
+export default BurgerStack;
