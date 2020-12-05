@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 const CustomToppingForm = ({addCustomTopping}) => {
     //set state for form
     const [topping, setTopping] = useState('')
     //handle change function to capture input
     const handleChange = event => {
+        console.log(event.target.value)
         setTopping(event.target.value)
     }
     //handle form submission to add topping to Ingredient
     const handleSubmit = event => {
         //stop page from refreshing
         event.preventDefault()
-
+        //populate id, name, and color of new ingredient
+        console.log(topping)
         addCustomTopping({
             id: Math.floor(Math.random() * 100 + 13),
             name: topping,
@@ -21,10 +23,11 @@ const CustomToppingForm = ({addCustomTopping}) => {
 
     return(
         <form onSubmit={handleSubmit}>
-            <input 
+            <input
                 name="text" 
-                value={topping} 
-                onChange={handleChange} placeholdler="Add a custom topping here"
+                value={topping}
+                onChange={handleChange} 
+                placeholdler="Add a custom topping here"
             />
             <button onSubmit={handleSubmit}>
                 Add Custom Topping

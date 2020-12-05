@@ -26,7 +26,7 @@ const App = () => {
 
   //add selected ingredient
   const selectedTopping = (name) => {
-    console.log(name)
+    console.log(selectedIngredients)
     setSelectedIngredients([name,...selectedIngredients])
   }
 
@@ -36,8 +36,18 @@ const App = () => {
   }
 
   //function to pass to add custom topping form
-  const addCustomTopping = (topping) => {
-    setIngredient([...ingredients, topping])
+  const addCustomTopping = (ingredient) => {
+    setIngredient([...ingredients, ingredient])
+  }
+
+  //function to allow user to undo last ingredient added to burger
+  const undoLastIngredient = (selectedIngredient) => {
+    console.log(selectedIngredients)
+    let arrayLength = selectedIngredients.length-1
+    console.log(selectedIngredients[arrayLength])
+    
+    setSelectedIngredients(selectedIngredients.filter((selectedIngredient) => selectedIngredient === selectedIngredients[arrayLength]))
+    
   }
 
   return (
@@ -64,6 +74,7 @@ const App = () => {
         selectedIngredients = {selectedIngredients}
         clearBurger = {() => clearBurger()}
         key = {Math.floor(Math.random()*selectedIngredients.length)}
+        undoLastIngredient = {() => undoLastIngredient()}
       />
     </div>
     </div>

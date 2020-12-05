@@ -1,5 +1,4 @@
 const Ingredient = ({id, name, selectedTopping, color}) => {
-  console.log(color)
     return (
     <div>
       <div className="ingredient" key = {id} style={{backgroundColor: color}}>{name}</div>
