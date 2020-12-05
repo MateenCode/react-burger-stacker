@@ -7,6 +7,7 @@ const BurgerPane = ({burgerStack, clearBurger}) => {
         burger stacking area
 
         {burgerStack.map((ingredient, i)=>{
+            console.log("burgerStack from BurgerPane:", burgerStack)
             return <li key={i}>
                 {ingredient}
                 </li>

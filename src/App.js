@@ -2,7 +2,6 @@ import React, {useState} from "react";
 // Components imports
 import IngredientList from "./components/IngredientList";
 import BurgerPane from "./components/BurgerPane";
-// import BurgerStack from "./components/BurgerStack"
 // CSS imports
 import "./css/App.css";
 
@@ -26,9 +25,9 @@ const App = () => {
 
   const [burgerStack, setBurgerStack] = useState([])
 
-  const addIngredient = (e, addedIngredient) => {
-    e.preventDefault()
-    setBurgerStack([addedIngredient, ...burgerStack])
+  const addIngredient = (addedIngredient) => {
+    console.log("addedIngredients are:", addedIngredient)
+    setBurgerStack([burgerStack,...burgerStack])
   }
 
   function clearStack(e) {
