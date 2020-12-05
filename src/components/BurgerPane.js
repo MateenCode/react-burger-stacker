@@ -7,7 +7,11 @@ const BurgerPane = ({burgerStack, clearBurger}) => {
     <div className="pane">
         <h3>your burger</h3>
 
-        <BurgerStack burgerStack={burgerStack} />
+        {burgerStack.map((ingredient, i) => (
+            <BurgerStack key={i} name={ingredient.name} />
+        ) )}
+
+        {/* <BurgerStack burgerStack={burgerStack} /> */}
 
         {/* {burgerStack.map((ingredient, i)=>(
             // console.log("burgerStack from BurgerPane:", burgerStack)

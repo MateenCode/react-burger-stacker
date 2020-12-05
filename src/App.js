@@ -38,9 +38,9 @@ const App = () => {
   
   return (
     <>
-      <h1>welcome to burger stacker</h1>
+      <h1>welcome to good burger</h1>
       <div className="App">
-        <IngredientList ingredients={ingredients} addToStack={addToStack} />
+        <IngredientList ingredients={ingredients} addToStack={addToStack} burgerStack={burgerStack} />
         <BurgerPane burgerStack={burgerStack} clearBurger={clearStack} />
       </div>
     </>
