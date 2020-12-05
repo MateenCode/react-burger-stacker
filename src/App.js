@@ -5,6 +5,7 @@ import IngredientList from "./components/IngredientList";
 
 function App() {
   // helps make this "global" or accessible throughout the components
+  // use State gives us reference to state by the first parameter in the array 
   const [ingredients, setIngredients] = useState([
     { name: "Kaiser Bun", color: "saddlebrown" },
     { name: "Sesame Bun", color: "sandybrown" },
@@ -19,6 +20,7 @@ function App() {
     { name: "Bacon", color: "maroon" },
     { name: "Onion", color: "lightyellow" },
   ]);
+
   const [stackedBurg, setStackedBurg] = useState([]);
 
   let moveIngredient = (e, ingredients) => {
@@ -29,7 +31,7 @@ function App() {
   let clearBurger = () => {
     setStackedBurg([]);
   };
-
+  // make sure ingredientlist is on the left and burgerpane is on the right
   return (
     <div className="burger-body">
       <div className="ingredients">

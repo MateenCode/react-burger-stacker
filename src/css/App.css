@@ -1,33 +1,32 @@
-.App {
-  text-align: center;
-}
 .burger-body{
-  display: flex;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
 }
-.ingredients{
-  outline-color: black;
-  width: 50%;
-  height: 400px;
+.ingredients, .burger-stack{
+  margin: 0 auto;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 300px;
+  height: 500px;
+  text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+#clear-btn{
   border: 1px solid black;
   border-radius: 15px;
   text-align: center;
-
+  background-color: white;
 }
- ul{
-   list-style-type: none;
- }
-.burger-stack{
-  align-items: flex-end;
-  outline-color: black;
-  width: 50%;
-  height: 400px;
+#ingredient-btn{
   border: 1px solid black;
-  border-radius: 15px;
   text-align: center;
-
-}
-.ingredient-btn{
-  width: 100px;
-  background-color: rgb(86, 255, 86);
-
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
 }

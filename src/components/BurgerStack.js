@@ -5,8 +5,10 @@ const BurgerStack = ({stackedBurg}) => {
     return (
         <div>
             <ul>
-                {stackedBurg.map((ingredient, i) => {
-                return <li key={i} style={{backgroundColor: `${ingredient.color}`}}>{ingredient.name}</li>;
+                {/* mapping through the stacked burger list as well to make sure it's stored as another array on the right*/}
+                {/* used in-line styling to make it easier... */}
+                {stackedBurg.map((ingredient, index) => {
+                return <li key={index} style={{backgroundColor: `${ingredient.color}`}}>{ingredient.name}</li>;
                 })}
             </ul>
         </div>
