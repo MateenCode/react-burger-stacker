@@ -8,6 +8,7 @@ const BurgerPane = (props) => {
         <div>
             <BurgerStack stackedBurg={props.stackedBurg} />
             {/* pass onClick btn as an anon function to ensure it only clears when clicked */}
+            <p>Burger Stacking Area</p>
             <button onClick={props.clearBurger} id="clear-btn">Clear</button>
         </div>
     )
