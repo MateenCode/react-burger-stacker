@@ -10,8 +10,10 @@
 
 .App {
   display: flex;
-  height: 500px;
-  position: relative; 
+  flex-direction: row;
+  justify-content: center;
+  /* height: 500px;
+  position: relative;  */
 }
 
 .column {
@@ -25,7 +27,7 @@
 
 .stack-area{
   position:absolute;
-  bottom:0px;
+  bottom:150px;
   right:17%;
   
 }
