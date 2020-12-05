@@ -3,7 +3,9 @@ import "./css/App.css";
 import BurgerPane from "./components/BurgerPane";
 import IngredientList from "./components/IngredientList";
 
+
 const App = () => {
+
   const [ingredients] = useState([
     { name: "Kaiser Bun", color: "saddlebrown" },
     { name: "Sesame Bun", color: "sandybrown" },
@@ -18,17 +20,21 @@ const App = () => {
     { name: "Bacon", color: "maroon" },
     { name: "Onion", color: "lightyellow" },
   ]);
-  const [chosenIngredients, setChosenIngredients] = useState([]);
 
-  let addIngredient = (e, ingredients) => {
+
+const [chosenIngredients, setChosenIngredients] = useState([]);
+
+
+let addIngredient = (e, ingredients) => {
     e.preventDefault();
     setChosenIngredients([ingredients, ...chosenIngredients]);
-  };
+};
 
-  let clearBurger = () => {
+
+let clearBurger = () => {
     setChosenIngredients([]);
-  };
-  // addIngredient = (e, )
+};
+
   return (
     <div className="burger-body">
       <div className="ingredients">
