@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React from 'react';
 import BurgerStack from './BurgerStack';
 
 const BurgerPane = (props) => {
@@ -10,13 +10,13 @@ const BurgerPane = (props) => {
         <div>
             <h3>Burger Pane</h3>
             {props.ingredients.map(ingredient => {
-                if (ingredient.isOnPane === true){
-                    return <BurgerStack key={ingredient.name} object={ingredient} ingredientList={props.ingredients}></BurgerStack>
+                if (ingredient.isOnPane > 0){
+                    return <BurgerStack key={ingredient.name} object={ingredient} ingredientList={props.ingredients} ></BurgerStack>
                 }else{
                     console.log(ingredient.name)
                 }
             })}
-            <hr></hr>
+            <button onClick={props.setter}>Clear</button>
         </div>
     )
 }

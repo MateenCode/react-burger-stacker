@@ -1,11 +1,19 @@
-import React , { useState } from 'react';
+
+import React from 'react';
 
 const BurgerStack = (props) => {
 
+    const divs = []
+
+    for(let i = 0; i < props.object.isOnPane; i++){
+        divs.push(<div style={{margin: "auto",height:"20px",width:"50%",background:props.object.color}}>
+                
+        </div>)
+    }
+
     return(
-        
-        <div style={{textAlign:"center",height:"20px",width:"50px",background:props.object.color}}>
-             Here   
+        <div>
+            {divs}
         </div>
        
     )
