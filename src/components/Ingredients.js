@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Ingredients(props) {
-
+    // child component for ingredient list, maps all the ingredients from starter data and allows for users to choose a single ingredient similar to the todo list
     return(
         <div class="ingredients">
             <ul>

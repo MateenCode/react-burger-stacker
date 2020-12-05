@@ -4,6 +4,7 @@ import BurgerPane from "./components/BurgerPane";
 import IngredientList from "./components/IngredientList";
 
 function App() {
+  // helps make this "global" or accessible throughout the components
   const [ingredients, setIngredients] = useState([
     { name: "Kaiser Bun", color: "saddlebrown" },
     { name: "Sesame Bun", color: "sandybrown" },
@@ -22,7 +23,6 @@ function App() {
 
   let moveIngredient = (e, ingredients) => {
     e.preventDefault();
-    console.log(ingredients);
     setStackedBurg([ingredients, ...stackedBurg]);
   };
 
@@ -30,8 +30,6 @@ function App() {
     setStackedBurg([]);
   };
 
-  console.log(ingredients);
-  // addIngredient = (e, )
   return (
     <div className="burger-body">
       <div className="ingredients">

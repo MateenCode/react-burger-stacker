@@ -1,6 +1,7 @@
 import React from 'react';
 
 const BurgerStack = ({stackedBurg}) => {
+    // component where the stacking begins -- this takes from ingredients components
     return (
         <div>
             <ul>
