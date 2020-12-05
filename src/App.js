@@ -8,6 +8,7 @@ import "./css/App.css";
 // functional not class
 const App = () => {
 
+  // array of objects
   const [ingredient, setIngredient] = useState([
     { name: "kaiser bun", color: "saddlebrown" },
     { name: "sesame bun", color: "sandybrown" },
@@ -22,18 +23,18 @@ const App = () => {
     { name: "bacon", color: "maroon" },
     { name: "onion", color: "lightyellow" }
   ])
-
+  
   const [burgerStack, setBurgerStack] = useState([])
 
   const addIngredient = (addedIngredient) => {
-    console.log("addedIngredients are:", addedIngredient)
-    setBurgerStack([burgerStack,...burgerStack])
+    setBurgerStack([addedIngredient,...burgerStack])
+    console.log("burgerStack is:", burgerStack)
   }
 
-  function clearStack(e) {
+  const clearStack = () => {
     setBurgerStack([])
   }
-
+  
   return (
     <div className="App">
       <IngredientList ingredients={ingredient} addIngredient={addIngredient} />

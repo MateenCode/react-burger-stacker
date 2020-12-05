@@ -6,12 +6,12 @@ const BurgerPane = ({burgerStack, clearBurger}) => {
     <div>
         burger stacking area
 
-        {burgerStack.map((ingredient, i)=>{
-            console.log("burgerStack from BurgerPane:", burgerStack)
-            return <li key={i}>
-                {ingredient}
-                </li>
-            })}
+        {burgerStack.map((ingredient, i)=>(
+            // console.log("burgerStack from BurgerPane:", burgerStack)
+            <li key={i}>
+                {ingredient.name}
+            </li>
+        ))}
 
         <button onClick={clearBurger}>clear</button>
     </div>
