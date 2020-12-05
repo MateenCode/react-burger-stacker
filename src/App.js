@@ -27,8 +27,12 @@ const App = () => {
 const [burgerStack, setBurgerStack] = useState([])
   return (
     <div className="App">
+      <div className="ingredientList">
       <IngredientList ingredient={ingredient} setBurgerStack={setBurgerStack} burgerStack={burgerStack}/>
+      </div>
+      <div className="burgerPane">
       <BurgerPane burgerStack={burgerStack} setBurgerStack={setBurgerStack}/>
+      </div>
     </div>
   );
 };

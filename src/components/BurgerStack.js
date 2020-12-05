@@ -6,7 +6,7 @@ import Ingredients from './Ingredients'
 const BurgerStack = ({burgerStack}) => {
 
     return <div>
-        <div>this is burger stack that is going to show the stack of ingredients</div>
+        {/* this is burger stack that is going to show the stack of ingredients */}
         {burgerStack.map(item => {
             const background = item.color
             console.log(item.name)

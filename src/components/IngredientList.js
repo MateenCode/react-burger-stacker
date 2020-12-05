@@ -6,30 +6,30 @@ import BurgerStack from './BurgerStack'
 
 
 const IngredientList = ({ ingredient, setBurgerStack, burgerStack }) => {
-    //set ingredient list 
-
-    //    debugger
 
     const sendIngredient = event => {
         const currentItem = {
-            name: event.target.value.split(",")[0], 
+            name: event.target.value.split(",")[0],
             color: event.target.value.split(",")[1]
         }
         setBurgerStack([currentItem, ...burgerStack])
     }
-    
+
     return (
-        <div className="IngredientList" >
-            <div>This component displays the list of ingredients from the Ingredients component</div>
+        <div className="specificIngredient">
+            {/* <div>This component displays the list of ingredients from the Ingredients component</div> */}
 
             {ingredient.map(item => {
                 const background = item.color
                 return (
-                    <div className="specificIngredient"
+                    <div 
                         style={{ "background-color": background }}>
-                        <p key={item.name}>{item.name}</p>
+                        <p key={item.name}>
+                            {item.name}
+                            <button className="ingredientButton" value={`${item.name}, ${item.color}`} onClick={sendIngredient}>></button>
+                        </p>
                         {/* button needs to send ingredient to burger stack */}
-                        <button value={`${item.name}, ${item.color}`} onClick={sendIngredient}>></button>
+
                     </div>
                 )
             })}

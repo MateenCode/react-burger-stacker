@@ -1,12 +1,44 @@
 .App {
+  border: solid 3px green;
   text-align: center;
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.BurgerPane {
+.burgerPane {
+  display: flex;
+  flex-direction: row;
   border: solid 3px black;
+  width: 40%;
+  height: 70%;
+  align-self: flex-end;
 }
 
-.IngredientList {
+.burgerStack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ingredientList {
+  display: flex;
+  flex-direction: row;
   border: solid 3px black;
+  width: 40%;
+  height: 70%;
+}
+
+.specificIngredient {
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+	-webkit-text-fill-color: white;
+  width: 100%;
+}
+.ingredientButton {
+  
+}
+
+.clearButton {
+
 }

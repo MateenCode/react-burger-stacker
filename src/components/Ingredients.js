@@ -22,8 +22,7 @@ const Ingredients = () => {
     return (
         <div >
             
-            <IngredientList 
-            ingredient={ingredients} />
+            <IngredientList ingredient={ingredients} />
         </div>
     )
 }
