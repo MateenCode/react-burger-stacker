@@ -4,8 +4,8 @@ import Ingredient from "./Ingredient";
 const BurgerStack = ({burgerStack}) => {
     return (
         <div className="stack">
-            {burgerStack.map(ingredient => (
-                <Ingredient name={ingredient.name} />
+            {burgerStack.map(addedIngredient => (
+                <Ingredient name={addedIngredient.name} />
             ))}
         </div>
     )
