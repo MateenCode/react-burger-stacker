@@ -1,5 +1,4 @@
 .ings{
-  text-align: center;
   margin-top: 10px;
 }
 
@@ -11,8 +10,22 @@
 
 .App {
   display: flex;
+  height: 500px;
+  position: relative; 
 }
 
 .column {
   flex: 50%;
+  text-align: center;
+}
+
+.clear-btn{
+  margin-top: 20px;
+}
+
+.stack-area{
+  position:absolute;
+  bottom:0px;
+  right:17%;
+  
 }

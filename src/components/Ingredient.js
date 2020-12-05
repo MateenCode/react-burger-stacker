@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Ingredient = ({name, color}) => {
+const Ingredient = ({name, color, addToStack}) => {
     return (
         <div className="ings">
             <div style={{color: color, display: "inline"}}>{name}</div>
-            <button className="add-btn">></button>
+            <button className="add-btn" onClick={addToStack}>Add</button>
         </div>
     )
 }
