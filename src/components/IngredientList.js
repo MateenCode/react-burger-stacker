@@ -23,10 +23,10 @@ const IngredientList = ({ ingredient, setBurgerStack, burgerStack }) => {
                 const background = item.color
                 return (
                     <div 
-                        style={{ "background-color": background }}>
+                        style={{ backgroundColor: background }}>
                         <p key={item.name}>
                             {item.name}
-                            <button className="ingredientButton" value={`${item.name}, ${item.color}`} onClick={sendIngredient}>></button>
+                <button className="ingredientButton" value={`${item.name}, ${item.color}`} onClick={sendIngredient}>></button>
                         </p>
                         {/* button needs to send ingredient to burger stack */}
 

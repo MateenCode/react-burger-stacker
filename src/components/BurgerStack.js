@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 //components
-import Ingredients from './Ingredients'
+
 
 const BurgerStack = ({burgerStack}) => {
 
@@ -12,7 +12,7 @@ const BurgerStack = ({burgerStack}) => {
             console.log(item.name)
             return (
                 <div className="specificIngredient"
-                    style={{ "background-color": background }}>
+                    style={{ backgroundColor: background }}>
                     <p key={item.name}>{item.name}</p>
                 </div>)
             }
