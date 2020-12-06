@@ -1,0 +1,11 @@
+.stackingArea{
+  display: inline-block;
+  margin-left: 10px;
+  border: solid 1px black;
+}
+
+.clear{
+  display: block;
+  text-align: center;
+  margin-left: 47px;
+}

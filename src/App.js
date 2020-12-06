@@ -1,13 +1,31 @@
-import React from "react";
+import React ,{useState}from "react";
 // Components imports
-import FunctionalComponent from "./components/FunctionalComponent";
+import Ingredients from './components/Ingredients'
+import StackingArea from './components/StackingArea'
 // CSS imports
 import "./css/App.css";
 
+
+
+
+
+
 const App = () => {
+
+  const [selectedIngredients, setSelectedIngredients] = useState([])
+
+
+  const sendData = (param) =>{
+     setSelectedIngredients([param,...selectedIngredients])
+  }
+
+
+
   return (
     <div className="App">
-      <FunctionalComponent />
+      <Ingredients sendData={sendData}/>
+    
+      <StackingArea ingredients={selectedIngredients}/>
     </div>
   );
 };
