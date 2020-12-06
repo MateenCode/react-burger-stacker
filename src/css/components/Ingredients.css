@@ -1,0 +1,9 @@
+
+.ingredientsContainer{
+    display: inline-block;
+    border: solid black 1px;
+}
+
+p, .button1 {
+    display: inline-block;
+  }
