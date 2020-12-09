@@ -1,3 +1,37 @@
-.App {
-  text-align: center;
+.burger-body {
+    display: flex;
+    padding: 20px 0 0 0;
+  }
+
+.ingredients {
+    height: 550px;
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+  }
+
+.list {
+    border: 1px black solid;
+    padding: 0 20px 0 20px;
+    border-radius: 4vw;
 }
+
+ul {
+     list-style-type: none;
+  }
+
+.list-burgerlist {
+      border: none;
+  }
+
+.burger-stack{
+    border: 1px black solid;
+    border-radius: 4vw;
+    width: 50%;
+    height: 550px;
+    text-align: center;
+    margin: auto;
+    color:black;
+    font-size: 25px
+  }
+  
