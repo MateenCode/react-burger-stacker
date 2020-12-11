@@ -10,10 +10,7 @@ const BurgerStack= (props) => {
                     return(
                         <li key={index} style= {{ backgroundColor: `${item.color}` }}>
                         {item.name}
-                
-                           
                         </li>
-
                     )
                 }
                 )}

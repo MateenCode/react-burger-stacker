@@ -40,13 +40,7 @@ const App = () => {
 
 
   return (
-    // <div style={{flexDirection: "row", jutifyContent: 'flex-start'}}> 
-    //   <h1>Ingredient List: </h1>
-    //   {items.map((item,  index)=>(
-    //     <IngredientList  name={item.name} color={item.color} itemIndex={index} />  
-    //     ))}
-    //     <BurgerPane />  
-    // </div>
+   
     <div>
       <div>
       <IngredientList   addItem={addItem} items={items}/>  
