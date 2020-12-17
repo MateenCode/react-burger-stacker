@@ -29,7 +29,7 @@ code {
 
 #burger{
   width: 33%;
-  height: 50%;
+  height: 80%;
   /* max-width: 300px;
   max-height: 300px; */
   position: absolute;
@@ -38,22 +38,42 @@ code {
   right: 0;
   bottom: 0;
   margin-left: 50%;
-  margin-top:10%;
+  margin-top:20%;
   border:2px solid red;
+  background-color:white;
+  /* display:flex; */
+  /* justify-content: center;  */
+}
 
-  
+#deleteButton{
+  height:10%;
+  margin-left:45%;
+   color:red;
 }
 
 
 
 
-body {background:white;}
+
+
+#clearBurger{
+  height:5%;
+}
+
+
+
+
+
+
+body {background:rgb(253, 253, 253);}
 h1,h2 {
   font-size:1.5em;
   margin:-1.5em 0 0.1em;
   color:black;
   line-height:1;
   text-shadow:0 0 0.05em #333;
+ 
+
 }
 input[type="radio"],
 input[type="checkbox"] {
@@ -83,6 +103,7 @@ input[type="checkbox"]:checked + label {
     0 0 0px 1px #666;
 }
 .girl {
+  margin-top:18vw;
   font-size:2em;
   margin-left:10vw;
   width:4em;
@@ -90,7 +111,8 @@ input[type="checkbox"]:checked + label {
   background:#c66;
   border-radius:20%;
   border:0.2em solid #333;
-  position:relative;
+  position:absolute;
+  z-index: 2;
 }
 .girl:after {
   content:"";
@@ -100,6 +122,7 @@ input[type="checkbox"]:checked + label {
   background-color:#000;
   border-radius:50%;
   position:absolute;
+  z-index: 2;
   left:-0.5em;
   top:3em;
   box-shadow:
@@ -122,8 +145,8 @@ input[type="checkbox"]:checked + label {
     0.6em 0em 0 1em #000,
   
     /* mouse */
-    2.5em 2.8em 0 1.6em #fca,
-    2.5em 3.2em 0 1.4em #d63,
+    2.5em 3.8em 0 1.1em #fca,
+    2.5em 3.0em 0 1.2em rgb(228, 36, 11),
   
     /* face */
     2.5em 0em 0 5em #fca,
@@ -297,4 +320,55 @@ input[type="checkbox"]:checked + label {
     4.8em -1.5em 0 -3em #043,
     0em -2em 0 1.2em #063,
     0 0 0 0 transparent;
+  }
+
+
+  #ingredientList{
+    /* border:2px solid red; */
+    margin-top:6vw;
+    font-family: 'Architects Daughter', cursive;
+
+  }
+
+  #ulIngredient{
+    border:2px solid blue;
+    display:flex;
+    justify-content: center; 
+   }
+
+  #liIngredient{
+    border:2px solid yellow;
+    display:flex;
+    /* justify-content: flex-start;
+    align-content: center; */
+    flex-direction: column;
+    width:10vw;
+    text-align:center;
+    font-family: 'Anton', sans-serif;
+    font-size:1.5vw;
+    
+  }
+
+  #add{
+    margin-top:1vw;
+    margin-right:2vw;
+    align-content: center;
+
+  }
+
+  #liBurger{
+    border:2x solid pink;
+  }
+
+
+  /* #smilePic{
+    margin-top:415px;
+    position: absolute;
+    z-index: 3;
+    margin-left:-40px;
+    width:150px;
+  } */
+
+  #smile{
+    background-color:red;
   }
