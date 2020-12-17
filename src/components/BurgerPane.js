@@ -5,7 +5,7 @@ import BurgerStack from './BurgerStack'
 const BurgerPane = (props) => { 
 
 return(
-        <div style={{border: '3px solid blue', width:'30%', marginLeft:'500px'}}> 
+        <div> 
                 <BurgerStack burger={props.burger} clearBurger={props.clearBurger}  />  
        </div>
 )

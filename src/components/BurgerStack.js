@@ -6,13 +6,13 @@ const BurgerStack = (props) =>{
 
 
     return(
-        <div>
-        <h1 style = {{textAlign: "center", fontFamily: "Chalkduster, fantasy"}}> Stack a Burger: </h1>
-            <ul> 
+        <div id="burger">
+        <h1 style = {{textAlign: "center", fontFamily: "Chalkduster, fantasy"}}>  </h1>
+            <ul style= {{ textDecoration:"none"}}> 
                 {props.burger.map((item, index)=>{
                     return(
-                        <li key={index} style= {{ backgroundColor: `${item.color}` }}>
-                            {item.name} 
+                        <li key={index} style= {{ color:"transparent", backgroundImage: "url(" + `${item.image}` + ")",  backgroundPosition: 'center', backgroundSize: `${item.width}`, backgroundRepeat: 'no-repeat', borderRadius: `${item.style}`, height: `${item.height}`}}>
+                            
                         </li>
                     )
                 }

@@ -8,18 +8,17 @@ import "./css/App.css";
 const App = () => {
 
     const [items, setItems] = useState([ 
-        { name: "Kaiser Bun", color: "saddlebrown" },
-        { name: "Sesame Bun", color: "sandybrown" },
-        { name: "Gluten Free Bun", color: "peru" },
-        { name: "Lettuce Wrap", color: "olivedrab" },
-        { name: "Beef Patty", color: "#3F250B" },
-        { name: "Soy Patty", color: "#3F250B" },
-        { name: "Black Bean Patty", color: "#3F250B" },
-        { name: "Chicken Patty", color: "burlywood" },
-        { name: "Lettuce", color: "lawngreen" },
-        { name: "Tomato", color: "tomato" },
-        { name: "Bacon", color: "maroon" },
-        { name: "Onion", color: "lightyellow" }, 
+        { name: "Kaiser Bun", color: "tan", style: "50% 50% 0 0", height:"8vw", width: "50%", image: "https://thumbs.dreamstime.com/b/burger-top-bun-icon-cartoon-style-vector-web-design-isolated-white-background-191669233.jpg" },
+        { name: "Mayo", color: "goldenrod", style: "50% 50% 0 0", height:"4.7vw", width: "35%", image: "https://previews.123rf.com/images/madllen/madllen1411/madllen141100340/33962508-decoration-zig-zag-of-cheese-sauce-isolated-on-white-background.jpg" },
+        { name: "Pickles", color: "peru", style: "50% 50% 0 0", height:"4vw", width: "30%", image: "https://i.pinimg.com/originals/52/1e/7d/521e7dc9b7caac57bc9496de6aecb5d8.jpg" },
+        { name: "Beef Patty", color: "#3F250B", style: "20%", height:"6vw",width: "40%", image: "https://lh3.googleusercontent.com/proxy/FBguCIDQdGxgrTC9g7IhNfRoKlI_Z_1M6PhhAqtuSBd4YLqlot8XWwJSOAFKvVX3H88yWvNHMfLuTkfqIPCDRTEz" },
+        { name: "Ketchup", color: "brown", style: "20%", height:"5.5vw", width: "60%", image: "https://st3.depositphotos.com/1010050/15368/i/1600/depositphotos_153689926-stock-photo-red-drizzle-sauce.jpg" },
+        { name: "Cheese", color: "yellow", style: "20%", height:"4vw", width: "60%", image: "https://img.pngio.com/cheese-slice-free-png-images-2019-cheese-slice-png-379_283.png" },
+        { name: "Bottom bun", color: "burlywood", style: "20%", height:"7vw", width: "50%", image: "https://previews.123rf.com/images/nsit0108/nsit01081901/nsit0108190101504/114641506-fresh-burger-bun-icon-cartoon-of-fresh-burger-bun-vector-icon-for-web-design-isolated-on-white-backg.jpg" },
+        { name: "Lettuce", color: "lawngreen", style: "20px", height:"4vw", width: "40%", image: "https://w0.pngwave.com/png/345/100/hamburger-lettuce-%E3%81%84%E3%82%89%E3%81%99%E3%81%A8%E3%82%84-illustration-vegetable-lettuce-burger-png-clip-art.png" },
+        { name: "Tomato", color: "tomato", style: "0", height:"4vw", width: "30%", image: "https://www.seekpng.com/png/small/434-4344968_tomato-slice-transparent-background.png" },
+        { name: "Bacon", color: "maroon", style: "0", height:"6vw", width: "60%", image: "https://media.istockphoto.com/illustrations/hand-drawn-watercolor-slices-of-bacon-illustration-id1201316872"  },
+        { name: "Onion", color: "lightyellow", style: "20px", height:"6vw", width: "40%", image: "https://i.dlpng.com/static/png/1286915-onion-cartoon-vector-realistic-cartoon-onion-slices-png-onion-slice-png-2267_1865_preview.png"  }, 
     ])
 
 
