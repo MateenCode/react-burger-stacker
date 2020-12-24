@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import BurgerPane from './components/BurgerPane'
 import IngredientList from './components/IngredientList'
 import IngredientForm from './components/IngredientForm'
+import Karen from './components/Karen'
+
 import "./css/App.css";
 
 //we want to render the ingredients as soon as the user loads the page, thats why the array is inside app.js. which is the parent. 
@@ -61,6 +63,7 @@ const App = () => {
           <IngredientList items={items} addItem ={addItem} burger={burger} removeIngredients={removeIngredients} /> 
           <BurgerPane items={items} addItem ={addItem} burger={burger} clearBurger={clearBurger} /> 
           <IngredientForm addToIngredients ={addToIngredients} /> 
+          <Karen />
       </div>
     )
   }

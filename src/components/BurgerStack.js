@@ -18,7 +18,8 @@ const BurgerStack = (props) =>{
                 }
                 )}
             </ul>
-            <button id="clearBurger" onClick= {(event)=>{{props.clearBurger(event)}}}>CLEAR BURGER </button>
+            <button id="clearBurger" onClick= {(event)=>{{props.clearBurger(event)}}}>Feed Karen
+            </button>
         </div>
     )
 }
